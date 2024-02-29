@@ -1,6 +1,6 @@
 FROM node:20.11.1-bullseye AS build
 
-# Arguments
+# cli arguments
 ARG EXB_SRC
 
 # Copy src zip to container
