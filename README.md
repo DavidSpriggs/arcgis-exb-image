@@ -18,7 +18,7 @@ Do not change the file name. The version in the file name is important. For exam
 
 Place the zip file in the `exb-src` folder.
 
-Run the `build-container-from-src.sh` script from the same directory as the `Dockerfile`:
+From a machine that has docker installed, run the `build-container-from-src.sh` script from the same directory as the `Dockerfile`:
 
 ```shell
 sh ./build-container-from-src.sh
