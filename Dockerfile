@@ -17,9 +17,6 @@ RUN npm ci
 
 FROM node:20.11.1-bullseye-slim as production
 
-# Allow file system polling
-ENV CHOKIDAR_USEPOLLING=true
-
 # Copy ExB from the build stage to the final stage
 COPY --from=build /home/node/ArcGISExperienceBuilder /home/node/ArcGISExperienceBuilder
 
