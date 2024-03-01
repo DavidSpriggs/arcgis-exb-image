@@ -15,7 +15,7 @@ RUN npm ci
 WORKDIR /home/node/ArcGISExperienceBuilder/server
 RUN npm ci
 
-FROM node:20.11.1-bullseye-slim
+FROM node:20.11.1-bullseye-slim as production
 
 # Allow file system polling
 ENV CHOKIDAR_USEPOLLING=true

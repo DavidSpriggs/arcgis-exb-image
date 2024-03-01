@@ -21,6 +21,6 @@ printf "\n"
 printf "Slected file: $file\n"
 printf "Selected version: $version\n"
 
-docker build --build-arg EXB_SRC=$file -t "$DOCKER_HUB_NAMESPACE/$DOCKER_HUB_REPO:$version" .
+docker build --target production --build-arg EXB_SRC=$file -t "$DOCKER_HUB_NAMESPACE/$DOCKER_HUB_REPO:$version" .
 docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_TOKEN
 docker push "$DOCKER_HUB_NAMESPACE/$DOCKER_HUB_REPO:$version"
