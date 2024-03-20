@@ -18,15 +18,15 @@ Do not change the file name. The version in the file name is important. For exam
 
 Place the zip file in the `exb-src` folder.
 
-From a machine that has docker installed, run the `build-container-from-src.sh` script from the same directory as the `Dockerfile`:
+From a machine that has docker installed, run the `build-image-from-src.sh` script from the same directory as the `Dockerfile`:
 
 ```shell
-sh ./build-container-from-src.sh
+sh ./build-image-from-src.sh
 ```
 
 This will present you with a list of files to pick from. Make a selection then build.
 
-If you dont want to push the container to your registry, comment out the login and push lines. Or use this command:
+If you don't want to push the image to a registry, comment out the login and push lines. If you want to build and push to your own registry, update the tag and login lines as needed:
 ```shell
 docker build --target production --build-arg EXB_SRC="FILE" -t "DOCKER_HUB_NAMESPACE/DOCKER_HUB_REPO:VERSION" .
 ```
