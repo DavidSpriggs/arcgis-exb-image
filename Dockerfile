@@ -1,4 +1,4 @@
-FROM node:20.11.1-bullseye AS build
+FROM node:20.11.1 AS build
 
 # cli arguments
 ARG EXB_SRC
@@ -15,7 +15,7 @@ RUN npm ci
 WORKDIR /home/node/ArcGISExperienceBuilder/server
 RUN npm ci
 
-FROM node:20.11.1-bullseye-slim as production
+FROM node:20.11.1-alpine as production
 
 # Copy ExB from the build stage to the final stage
 COPY --from=build /home/node/ArcGISExperienceBuilder /home/node/ArcGISExperienceBuilder
