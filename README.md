@@ -14,7 +14,7 @@ DOCKER_HUB_REPO=<docker hub namespace repo>
 
 Download an Arcgis Experience Builder source zip file from [developers.arcgis.com](https://developers.arcgis.com/downloads/#arcgis-experience-builder).
 
-Do not change the file name. The version in the file name is important. For example `arcgis-experience-builder-1.13.zip`
+Do not change the file name. The version in the file name is important. For example `arcgis-experience-builder-1.15.zip`
 
 Place the zip file in the `exb-src` folder.
 
