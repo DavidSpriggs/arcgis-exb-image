@@ -18,7 +18,7 @@ done
 version=$(echo "$file" | grep -Eo '[0-9]+\.[0-9]+')
 
 printf "\n"
-printf "Slected file: $file\n"
+printf "Selected file: $file\n"
 printf "Selected version: $version\n"
 
 docker build --target production --build-arg EXB_SRC=$file -t "$DOCKER_HUB_NAMESPACE/$DOCKER_HUB_REPO:$version" .

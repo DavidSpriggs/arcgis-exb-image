@@ -1,2 +1,3 @@
 .env
 exb-src/arcgis-experience-builder-*.zip
+.DS_Store

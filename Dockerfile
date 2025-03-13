@@ -15,15 +15,15 @@ RUN npm ci
 WORKDIR /home/node/ArcGISExperienceBuilder/server
 RUN npm ci
 
-FROM node:20.11.1-alpine as production
+FROM node:20.11.1-alpine AS production
 
 # Copy ExB from the build stage to the final stage
 COPY --from=build /home/node/ArcGISExperienceBuilder /home/node/ArcGISExperienceBuilder
 
-# Change working dirctory to ExB root
+# Change working directory to ExB root
 WORKDIR /home/node/ArcGISExperienceBuilder
 
-# Install concurently globaly so we can run 2 services at once, client and server.
+# Install concurrently globally so we can run 2 services at once, client and server.
 RUN npm i -g concurrently
 
 # start up the ExB client and server.
